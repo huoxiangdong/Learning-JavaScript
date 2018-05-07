@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+   <style>
+.custom-scrollbar {
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+    overflow-y: auto;
+    position: relative;
+}
+.main {
+   position: absolute;
+   height: 30%;
+   width: 100%;
+   background-color: #ff5000;
+}
+   </style>
+</head>
+
+<body>
+    <div id="fuck" class="custom-scrollbar">
+        <div id="main" class="main"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure id exercitationem nulla qui repellat laborum vitae, molestias tempora velit natus. Quas, assumenda nisi. Quisquam enim qui iure, consequatur velit sit?</p>
+      </div>
+     
+ <script>
+    var div = document.getElementById('fuck')
+    var main = document.getElementById('main')
+   div.onscroll = function(e) {
+        main.style.top = div.scrollTop + 'px'
+        console.log(div.scrollTop)
+    }
+</script>
+</body>
+
+</html>
+
